@@ -1,4 +1,5 @@
 variable "name" {
+  default = "devops-exam-pgr301"
   description = "Base name for the Heroku app"
 }
 
