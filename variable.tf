@@ -3,6 +3,7 @@ variable "name" {
 }
 
 variable "buildpacks" {
+  default = [ "heroku/java" ]
   description = "Array of heroku buildpacks"
 }
 

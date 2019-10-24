@@ -1,5 +1,5 @@
 resource "heroku_pipeline" "deploy" {
-  name = "${var.name}-pipeline-deploy"
+  name = "${var.name}"
 }
 
 resource "heroku_pipeline_coupling" "staging" {
