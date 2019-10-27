@@ -12,3 +12,7 @@ variable "region" {
   description = "The region for Heroku deploy"
   default = "eu"
 }
+
+variable "logz_io_token" {
+  description = "The access token to report to logz.io"
+}
