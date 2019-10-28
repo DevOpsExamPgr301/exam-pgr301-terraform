@@ -10,20 +10,6 @@ resource "heroku_app" "production" {
   buildpacks = "${var.buildpacks}"
 }
 
-resource "heroku_build" "staging" {
-  app = "${heroku_app.staging}"
-  source {
-    url = "https://github.com/DevOpsExamPgr301/exam-pgr301-terraform/archive/test.tar.gz"
-  }
-}
-
-resource "heroku_build" "production" {
-  app = "${heroku_app.production}"
-  source {
-    url = "https://github.com/DevOpsExamPgr301/exam-pgr301-terraform/archive/test.tar.gz"
-  }
-}
-
 resource "heroku_app_config_association" "staging" {
   app_id = "${heroku_app.staging.id}"
 
