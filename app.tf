@@ -11,7 +11,7 @@ resource "heroku_app" "production" {
 }
 
 resource "heroku_config" "endpoints" {
-  sensitive_vars = {
+  vars = {
     LOGZ_IO_TOKEN = "${var.logz_io_token}"
   }
 }
