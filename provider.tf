@@ -16,14 +16,16 @@ provider "opsgenie" {
   api_url = "api.eu.opsgenie.com"
 }
 
-data "opsgenie_user" "owner" {
-  username = "devops.exam.pgr301@gmail.com"
+resource "opsgenie_user" "admin" {
+  username = "c6555881@urhen.com"
+  full_name = "Foo Bar"
+  role = "owner"
 }
 
 resource "opsgenie_team" "production" {
   name = "DevopsPgr301 team"
   member {
-    id = "${data.opsgenie_user.owner.id}"
+    id = "${opsgenie_user.admin.id}"
   }
 }
 
