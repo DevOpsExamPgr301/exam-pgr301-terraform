@@ -16,3 +16,7 @@ variable "region" {
 variable "logz_io_token" {
   description = "The access token to report to logz.io"
 }
+
+variable "database_url" {
+  description = "The database connection string"
+}
