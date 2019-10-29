@@ -20,6 +20,7 @@ resource "heroku_app_config_association" "staging" {
 
   sensitive_vars = {
     LOGZ_IO_TOKEN = "${var.logz_io_token}"
+    DATABASE_URL = "${var.database_url}"
   }
 }
 
